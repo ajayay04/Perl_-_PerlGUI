@@ -1,0 +1,135 @@
+#!usr/bin/perl
+use Tk;
+use strict;
+my $mw = MainWindow->new;
+$mw->geometry("700x500");
+$mw->title("COVID-19 HOTSPOT LIST");
+my $main_frame = $mw->Frame()->pack(-side => 'top', -fill => 'x');
+my $top_frame = $main_frame->Frame(-background => 'white')->pack(-side => 'top', -fill => 'x');
+my $left_frame = $main_frame->Frame(-background => 'black')->pack(-side => 'left',-fill => 'y');
+my $right_frame = $main_frame->Frame(-background => 'white')->pack(-side => 'right');
+$top_frame->Label(-text => 'COVID-19 HOTSPOT LIST', -background => 'light blue')->pack(-side => 'top');
+$left_frame->Label(-text => 'Enter State Name : ', -background => 'turquoise',-foreground => 'yellow')->pack(-side => 'left');
+my $copy_entry = $left_frame->Entry(-background => 'white',-foreground => 'red')->pack(-side => 'left');
+my $copy_button = $left_frame->Button(-text => 'GET HOTSPOT',-command => \&copy_entry)->pack(-side => 'right');
+my $clear_text = $right_frame->Button(-text => 'Clear Text',-command => \&clear_entry)->pack(-side => 'top');
+my $paste_text = $right_frame->Text(-background => 'white', -foreground => 'black')->pack(-side => 'top');
+sub clear_entry {
+$paste_text->delete('0.0','end');
+}
+sub copy_entry {
+my $copied_text = $copy_entry->get();
+my @district = hot_states($copied_text);
+foreach (@district){
+$paste_text->insert("end", $_);
+}
+}
+sub hot_states{
+my $state = @_;
+if( $state=~ /Uttar Pradesh/i ){
+my $s1 = 'Agra, Gautam Budhha Nagar, Meerut, Lucknow, Ghaziabad, Saharanpur, Shamli, Firozabad, Moradabad';
+my @ss1 = split(', ', $s1);
+return(@ss1);
+}
+elsif( $state =~ /Gujarat/i ){
+my $s2 = 'Ahmadabad, Vadodara, Surat, Bhavnagar, Rajkot';
+my @ss2 = split(', ', $s2);
+return(@ss2);
+}
+elsif( $state =~ /Delhi/i ){
+my $s3 = 'South, South East, Shahdara, West, North, Central, New Delhi, East, South West';
+my @ss3 = split(', ', $s3);
+return(@ss3);
+}
+elsif( $state =~ /Bihar/i ){
+my $s4 = 'Siwan';
+my @ss4 = split(', ', $s4);
+return(@ss4);
+}
+elsif( $state =~ /West Bengal/i ){
+my @s5 = 'Kolkata, Howrah, Medinipur East, 24 Paraganas North';
+my @ss5 = split(', ', $s5);
+return(@ss5);
+}
+elsif( $state =~ /Haryana/i ){
+my @s6 = 'Nuh, Gurugram, Palwal, Faridabad';
+my @ss6 = split(', ', $s6);
+return(@ss6);
+}
+elsif( $state =~ /Kerala/i ){
+my @s7 = 'Kasaragod,Kannur, Ernakulam, Malappuram, Thiruvananthpuram, Pathanamthitta';
+my @ss7 = split(', ', $s7);
+return(@ss7);
+}
+elsif( $state =~ /Punjab/i ){
+my @s8 = 'S.A.S Nagar, Shahid Bhagat Singh Nagar, Jalandhar, Pathankot, Mohali';
+my @ss8 = split(', ', $s8);
+return(@ss8);
+}
+elsif( $state =~ /Odisha/i ){
+my @s9 = 'Khordha';
+my @ss9 = split(', ', $s9);
+return(@ss9);
+}
+elsif( $state =~ /Tamil Nadu/i ){
+my @s10 = 'Chennai, Tiruchirappali, Coimbatore, Tirunelveli, Erode, Vellore, Dindigul, Villupuram, Tirupur, Theni, Namakkal, Chengalpattu, Madurai, Tuticorin, Karur, viruhnagar, Kanniyakumari, Cuddalore, Thiruvarur, Salem, Nagapattinam';
+my @ss10 = split(', ', $s10);
+return(@ss10);
+}
+elsif( $state =~ /Gujarat/i ){
+my @s11 = '';
+my @ss11 = split(', ', $s11);
+return(@ss11);
+}
+elsif( $state =~ /Maharashtra/i ){
+my @s12 = 'Mumbai, Pune, Thane, Nagpur, Sangli, Ahmednagar, Yavatmal, Aurangabad, Buldhana, Mumbai Suburban, Nashik';
+my @ss12 = split(', ', $s12);
+return(@ss12);
+}
+elsif( $state =~ /Uttarakhand/i ){
+my @s13 = 'Dehradun';
+my @ss13 = split(', ', $s13);
+return(@ss13);
+}
+elsif( $state =~ /Chhattisgarh/i ){
+my @s14 = 'Korba';
+my @ss14 = split(', ', $s14);
+return(@ss14);
+}
+elsif( $state =~ /Karanataka/i ){
+my @s15 = 'Bengaluru Urban, Mysuru, Belagavi';
+my @ss15 = split(', ', $s15);
+return(@ss15);
+}
+elsif( $state =~ /Rajasthan/i ){
+my $s16 = 'Jaipur, Tonk, Jodhpur, Banswara, Kota, Jhunjhunu, Jaisalmer, Bhilwara, Bikaner, Jhalawar, Bharatpur';
+my @ss16 = split(', ', $s16);
+return(@ss16);
+}
+elsif( $state =~ /Telangana/i ){
+my $s17 = 'Hyderabad, Nizamabad, Warangal Urban, Ranga Redddy, JogulambaGadwal, MedchalMalkagiri, Karimnagar, Nirmal';
+my @ss17 = split(', ', $s17);
+return(@ss17);
+}
+elsif( $state =~ /Andhra Pradesh/i ){
+my $s18 = 'Kurnool, Guntur, Spsr Nellore, Prakasam, Krishna, Y.S.R., West Godavari, Chittoor, Vishakhapatnam, East Godavari, Anantapur';
+my @ss18 = split(', ', $s18);
+return(@ss18);
+}
+elsif( $state =~ /Jammu and Kashmir/i ){
+my $s19 = 'Srinagar, Bandlpora, Baramulla, Jammu, Udhampur,Kupwara';
+my @ss19 = split(', ', $s19);
+return(@ss19);
+}
+elsif( $state =~ /Madhya Pradesh/i ){
+my $s20 = 'Indore, Bhopal, Khargone, Ujjain, Hoshangabad';
+my @ss20 = split(', ', $s20);
+return(@ss20);
+}
+elsif( $state =~ /Chandigarh/i ){
+my $s21 = 'Chandigarh';
+my @ss21 = split(', ', $s21);
+return(@ss21);
+}
+}
+MainLoop;
