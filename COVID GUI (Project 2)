@@ -1,0 +1,185 @@
+#!/usr/bin/perl -w
+use Tk;
+use strict;
+my $mw = MainWindow->new;
+$mw->geometry("600x600");
+$mw->title("COVID 19 DATA ");
+sub Delhi_sub {
+$mw1->messageBox(-message => "Delhi \n Total Confirmed Cases 2003 \n Cured/Discharged 290 \n Death 45",-type => "OK");
+}
+sub Gujarat_sub {
+$mw1->messageBox(-message => "Gujarat \n Total Confirmed Cases 1851 \n Cured/Discharged 106 \n Death 67", -type => "OK");
+}
+sub Mp_sub {
+$mw1->messageBox(-message => "Madhya Pradesh \n Total Confirmed Cases 1485 \n Cured/Discharged 127 \n Death 74", -type
+=> "OK"); }
+sub Maharashtra_sub {
+$mw1->messageBox(-message => "Maharashtra \n Total Confirmed Cases 4203 \n Cured/Discharged 507 \n Death 223", -type =>
+"OK");
+}
+sub Rajasthan_sub {
+$mw1->messageBox(-message => "Rajasthan \n Total Confirmed Cases 1478 \n Cured/Discharged 183 \n Death 14", -type =>
+"OK");
+}
+sub Tamil_sub {
+$mw1->messageBox(-message => "Tamil Nadu \n Total Confirmed Cases 1477 \n Cured/Discharged 411 \n Death 15", -type =>
+"OK");
+}
+sub UP_sub {
+$mw1->messageBox(-message => "Uttar Pradesh \n Total Confirmed Cases 1176 \n Cured/Discharged 129 \n Death 17", -type =>
+"OK");
+}
+}
+sub button2_sub {
+my $mw1 = MainWindow->new;
+$mw1->geometry("500x500");
+$mw1->Label(-text => "Green Zone States")->pack();
+my $bttn1 = $mw1->Button(-text => "ANDHRA PRADESH", -command =>\&AP_sub, -background =>'Green', -foreground
+=>'White', -relief =>'solid', -padx => 20, -pady => 20)->pack();
+my $bttn2 = $mw1->Button(-text => "TELENGANA", -command =>\&Telengana_sub, -background =>'Green', -foreground
+=>'White', -relief =>'solid', -padx => 20, -pady => 20)->pack();
+my $bttn3 = $mw1->Button(-text => "KERALA", -command =>\&Kerala_sub, -background =>'Green', -foreground =>'White', relief =>'solid', -padx => 20, -pady => 20)->pack();
+my $bttn4 = $mw1->Button(-text => "KARNATAKA", -command =>\&Karnataka_sub, -background =>'Green', -foreground
+=>'White', -relief =>'solid', -padx => 20, -pady => 20)->pack();
+sub AP_sub {
+$mw1->messageBox(-message => "Andhra Pradesh \n Total Confirmed Cases 722 \n Cured/Discharged 92 \n Death 20", -type =>
+"OK");
+}
+sub Telengana_sub {
+$mw1->messageBox(-message => "Telengana \n Total Confirmed Cases 873 \n Cured/Discharged 190 \n Death 21", -type =>
+"OK");
+}
+sub Kerala_sub {
+$mw1->messageBox(-message => "Kerala \n Total Confirmed Cases 408 \n Cured/Discharged 291 \n Death 3", -type => "OK"); }
+sub Karnataka_sub {
+$mw1->messageBox(-message => "Karnataka \n Total Confirmed Cases 408 \n Cured/Discharged 112 \n Death 16", -type =>
+"OK");
+}
+}
+sub button3_sub {
+my $mw1 = MainWindow->new;
+$mw1->geometry("500x500");
+$mw1->Label(-text => "Orange Zone States")->pack();
+my $bttn1 = $mw1->Button(-text => "ANDAMAN AND NICOBAR ISLANDS", -command =>\&An_sub, -background
+=>'Orange', -foreground =>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn2 = $mw1->Button(-text => "ARUNACHAL PRADESH", -command =>\&ARp_sub, -background =>'Orange', foreground =>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn3 = $mw1->Button(-text => "ASSAM", -command =>\&Assam_sub, -background =>'Orange', -foreground =>'White', relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn4 = $mw1->Button(-text => "BIHAR", -command =>\&Bihar_sub, -background =>'Orange', -foreground =>'White', relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn5 = $mw1->Button(-text => "CHANDIGARH", -command =>\&Chandigarh_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn6 = $mw1->Button(-text => "CHHATTISGARH", -command =>\&Chhattisgarh_sub, -background =>'Orange', foreground =>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack(); my $bttn7 = $mw1->Button(-text => "GOA", -command =>\&Goa_sub, -background =>'Orange', -foreground =>'White', -relief
+=>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn8 = $mw1->Button(-text => "HARYANA", -command =>\&Haryana_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn9 = $mw1->Button(-text => "MANIPUR", -command =>\&Manipur_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn10 = $mw1->Button(-text => "HIMACHAL PRADESH", -command =>\&Hp_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn11 = $mw1->Button(-text => "JAMMU AND KASHMIR", -command =>\&Jk_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn12 = $mw1->Button(-text => "JHARKHAND", -command =>\&Jharkhand_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn14 = $mw1->Button(-text => "MEGHALAYA", -command =>\&Meghalaya_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn15 = $mw1->Button(-text => "MIZORAM", -command =>\&Mizoram_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn16 = $mw1->Button(-text => "ORISSA", -command =>\&Orissa_sub, -background =>'Orange', -foreground =>'White', relief =>'solid', -padx => 8, -pady => 4)->pack(); my $bttn17 = $mw1->Button(-text => "PUDUCHERRY", -command =>\&Puducherry_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid',-padx => 8, -pady => 4)->pack();
+my $bttn18 = $mw1->Button(-text => "PUNJAB", -command =>\&Punjab_sub, -background =>'Orange', -foreground =>'White',
+-relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn19 = $mw1->Button(-text => "TRIPURA", -command =>\&Tripura_sub, -background =>'Orange', -foreground =>'White',
+-relief =>'solid',-padx => 8, -pady => 4)->pack();
+my $bttn20 = $mw1->Button(-text => "UTTARAKHAND", -command =>\&Uttarakhand_sub, -background =>'Orange', foreground =>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+my $bttn21 = $mw1->Button(-text => "WEST BENGAL", -command =>\&Wb_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid', -padx => 8, -pady => 4)->pack();
+sub An_sub {
+$mw1->messageBox(-message => "Andaman and Nicobar Islands \n Total Confirmed Cases 16 \n Cured/Discharged 11 \n Death
+0", -type => "OK");
+}
+sub ARp_sub {
+$mw1->messageBox(-message => "Arunachal Pradesh \n Total Confirmed Cases 1 \n Cured/Discharged 0 \n Death 0", -type =>
+"OK");
+}
+sub Assam_sub {
+$mw1->messageBox(-message => "Assam \n Total Confirmed Cases 35 \n Cured/Discharged 19 \n Death 1", -type => "OK");
+}
+sub Bihar_sub {
+$mw1->messageBox(-message => "Bihar \n Total Confirmed Cases 113 \n Cured/Discharged 42 \n Death 2", -type => "OK");
+}
+sub Chandigarh_sub {
+$mw1->messageBox(-message => "Chandigarh \n Total Confirmed Cases 26 \n Cured/Discharged 13 \n Death 0", -type => "OK");
+}
+sub Chhattisgarh_sub {
+$mw1->messageBox(-message => "Chhattisgarh \n Total Confirmed Cases 36 \n Cured/Discharged 25 \n Death 0", -type => "OK");
+}
+sub Goa_sub {
+$mw1->messageBox(-message => "Goa \n Total Confirmed Cases 7 \n Cured/Discharged 7 \n Death 0", -type => "OK");
+}
+sub Haryana_sub {
+$mw1->messageBox(-message => "Haryana \n Total Confirmed Cases 254 \n Cured/Discharged 127 \n Death 3", -type => "OK");
+}
+sub Manipur_sub {
+$mw1->messageBox(-message => "Manipur \n Total Confirmed Cases 2 \n Cured/Discharged 2 \n Death 0", -type => "OK");
+}
+sub Hp_sub {
+$mw1->messageBox(-message => "Himachal Pradesh \n Total Confirmed Cases 39 \n Cured/Discharged 16 \n Death 1", -type =>
+"OK");
+}
+sub Jk_sub {
+$mw1->messageBox(-message => "Jammu & Kashmir \n Total Confirmed Cases 368 \n Cured/Discharged 71 \n Death 5", -type
+=> "OK");
+}
+sub Jharkhand_sub {
+$mw1->messageBox(-message => "Jharkhand \n Total Confirmed Cases 46 \n Cured/Discharged 0 \n Death 2", -type => "OK");
+}
+sub Ladakh_sub {
+$mw1->messageBox(-message => "Ladakh \n Total Confirmed Cases 18 \n Cured/Discharged 14 \n Death 0", -type => "OK");
+}
+sub Meghalaya_sub {
+$mw1->messageBox(-message => "Meghalaya \n Total Confirmed Cases 11 \n Cured/Discharged 0 \n Death 1", -type => "OK");
+}
+sub Mizoram_sub {
+$mw1->messageBox(-message => "Mizoram \n Total Confirmed Cases 1 \n Cured/Discharged 0 \n Death 0", -type => "OK");
+}
+sub Orissa_sub {
+$mw1->messageBox(-message => "Orissa \n Total Confirmed Cases 74 \n Cured/Discharged 24 \n Death 1", -type => "OK");
+}
+sub Puducherry_sub {
+$mw1->messageBox(-message => "Puducherry \n Total Confirmed Cases 7 \n Cured/Discharged 3 \n Death 0", -type => "OK");
+}
+sub Punjab_sub {
+$mw1->messageBox(-message => "Punjab \n Total Confirmed Cases 245 \n Cured/Discharged 38 \n Death 16", -type => "OK");
+}
+sub Tripura_sub {
+$mw1->messageBox(-message => "Tripura \n Total Confirmed Cases 2 \n Cured/Discharged 1 \n Death 0", -type => "OK");
+}
+sub Uttarakhand_sub {
+$mw1->messageBox(-message => "Uttarakhand \n Total Confirmed Cases 46 \n Cured/Discharged 18 \n Death 0", -type => "OK");
+}
+sub Wb_sub {
+$mw1->messageBox(-message => "West Bengal \n Total Confirmed Cases 392 \n Cured/Discharged 73 \n Death 12", -type => "OK");
+}
+}
+my $button1 = $mw->Button(-text => "RED ZONE", -command => \&button1_sub, -background =>'Red', -foreground =>'White',
+-padx => 20, -pady => 20,-relief =>'solid', -anchor => 'center')->pack();
+my $button2 = $mw->Button(-text => "GREEN ZONE", -command => \&button2_sub, -background =>'Green', -foreground
+=>'White', -padx => 20, -pady => 20, -relief =>'solid', -anchor => 'center')->pack();
+my $button3 = $mw->Button(-text => "ORANGE ZONE", -command => \&button3_sub, -background =>'Orange', -foreground
+=>'White', -relief =>'solid', -padx => 20, -pady => 20, -anchor => 'center')->pack();
+sub button1_sub {
+my $mw1 = MainWindow->new;
+$mw1->geometry("500x500");
+$mw1->Label(-text => "Red Zone States")->pack();
+my $bttn1 = $mw1->Button(-text => "DELHI", -command =>\&Delhi_sub, -background =>'Red', -foreground =>'White', -padx
+=> 20, -pady => 20, -relief =>'solid', -anchor => 'center')->pack();
+my $bttn2 = $mw1->Button(-text => "GUJARAT", -command =>\&Gujarat_sub, -background =>'Red', -foreground =>'White', padx => 20, -pady => 20, -relief =>'solid', -anchor => 'center')->pack();
+my $bttn3 = $mw1->Button(-text => "MADHYA PRADESH", -command =>\&Mp_sub, -background =>'Red', -foreground
+=>'White', -padx => 20, -pady => 20, -relief =>'solid', -anchor => 'center')->pack(); my $bttn4 = $mw1->Button(-text => "MAHARASHTRA", -command =>\&Maharashtra_sub, -background =>'Red', -foreground
+=>'White', -padx => 20, -pady => 20, -relief =>'solid', -anchor => 'center')->pack();
+my $bttn5 = $mw1->Button(-text => "RAJASTHAN", -command =>\&Rajasthan_sub, -background =>'Red', -foreground
+=>'White', -padx => 20, -pady => 20, -relief =>'solid', -anchor => 'center')->pack();
+my $bttn6 = $mw1->Button(-text => "TAMIL NADU", -command =>\&Tamil_sub, -background =>'Red', -foreground
+=>'White', -relief =>'solid', -anchor => 'center', -padx => 20, -pady => 20)->pack();
+my $bttn7 = $mw1->Button(-text => "UTTAR PRADESH", -command =>\&UP_sub, -background =>'Red', -foreground
+=>'White', -relief =>'solid', -anchor => 'center', -padx => 20, -pady => 20)->pack();
+MainLoop;
